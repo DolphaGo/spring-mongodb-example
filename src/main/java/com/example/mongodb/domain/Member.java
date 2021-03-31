@@ -14,7 +14,9 @@ import lombok.ToString;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 @ToString
 public class Member {
-
+    /**
+     * Mongo ObjectIds don't map to a java Long type.
+     */
     @Id
     private String id;
     private String name;

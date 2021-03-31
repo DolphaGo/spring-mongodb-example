@@ -53,7 +53,7 @@ public class MemberService {
      */
     public List<Member> selectAll() {
         //Repository 버전
-        List<Member> list_by_Repository = memberRepository.findAll();
+//        List<Member> list_by_Repository = memberRepository.findAll();
 
         //mongoTemplate 버전
         List<Member> list_by_mongoTemplate = mongoTemplate.findAll(Member.class);
@@ -76,7 +76,7 @@ public class MemberService {
         Pageable pageable = PageRequest.of(0, 10);
 
         //Repository 버전
-        Page<Member> page_1 = memberRepository.findAll(pageable);
+//        Page<Member> page_1 = memberRepository.findAll(pageable);
 
         Query query = new Query().with(pageable);
         List<Member> list = mongoTemplate.find(query, Member.class);

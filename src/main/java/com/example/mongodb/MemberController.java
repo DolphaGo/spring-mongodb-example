@@ -17,13 +17,13 @@ import lombok.extern.slf4j.Slf4j;
 public class MemberController {
     private final MemberService memberService;
 
-    @GetMapping("/c")
-    public List<Member> c(){
+    @GetMapping("/r")
+    public List<Member> r(){
         return memberService.selectAll();
     }
 
-    @GetMapping("/r")
-    public void r(){
+    @GetMapping("/c")
+    public void c(){
         memberService.insert();
     }
 }
