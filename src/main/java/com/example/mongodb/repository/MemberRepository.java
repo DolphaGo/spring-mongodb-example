@@ -7,7 +7,9 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import com.example.mongodb.domain.Member;
 
 public interface MemberRepository extends MongoRepository<Member, String> {
-    public Member findByName(String name);
+    Member findByName(String name);
 
-    public List<Member> findByAge(int age);
+    List<Member> findByAge(int age);
+
+    void deleteByName(String name);
 }
